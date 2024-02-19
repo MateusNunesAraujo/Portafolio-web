@@ -113,11 +113,11 @@ main {
     font-weight: 700;
 }
 
-.hamburger{
-display: none;
+.hamburger {
+    display: none;
 }
 
-.contenido-menu{
+.contenido-menu {
     background: #000000a6;
     position: fixed;
     width: 100%;
@@ -125,18 +125,18 @@ display: none;
     transition: 1s;
     opacity: 1;
     pointer-events: none;
-    
+
 }
 
-.menu{
-width: 60%;
-height: 100%;
-padding-left: 20px;
-background-color: #fff;
-border: solid 2px #011C40;
+.menu {
+    width: 60%;
+    height: 100%;
+    padding-left: 20px;
+    background-color: #fff;
+    border: solid 2px #011C40;
 }
 
-.decorativos{
+.decorativos {
     height: 20%;
     display: flex;
     gap: 10px;
@@ -144,43 +144,45 @@ border: solid 2px #011C40;
     justify-content: center;
 }
 
-.lineas{
-display: flex;
-flex-direction: column;
-gap: 20px;
+.lineas {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
-.linea-1, .linea-2, .linea-3{
+.linea-1,
+.linea-2,
+.linea-3 {
     transition: all 1s;
     height: 5px;
     background-color: #00539C;
 }
 
-.linea-1{
-width: 140px;
+.linea-1 {
+    width: 140px;
 }
 
-.linea-2{
+.linea-2 {
     width: 120px;
 }
 
-.linea-3{
-width: 70px;
+.linea-3 {
+    width: 70px;
 }
 
-.opciones{
+.opciones {
     height: 80%;
-    
+
 }
 
-.opciones ul{
+.opciones ul {
     padding: 0;
     list-style: none;
 }
 
-.opciones ul img{
-width: 25px;
-height: 25px;
+.opciones ul img {
+    width: 25px;
+    height: 25px;
 }
 
 
@@ -188,53 +190,72 @@ height: 25px;
 
 @media (max-width: 500px) {
 
-    nav{
-    display: none;
+    #contactame-reducido {
+        display: block !important;
+        font-weight: 700;
+        border-radius: 10px;
+        border-style: solid;
+        border-width: 3px;
+        border-color: #011C40;
+        color: #011C40;
+        background: transparent;
+        width: 130px;
+        height: 38px;
+        margin-right: 10px;
     }
-    
-.hamburger {
-    display: block;
-    right: 0;
-    bottom: 0;
-    position: fixed;
-    z-index: 10;
-    cursor: pointer;
-}
 
-.hamburger input {
-    display: none;
-}
+    .logo {
+        font-size: 21px !important;
+        width: 50% !important;
+    }
 
-.hamburger svg {
-    /* The size of the SVG defines the overall size */
-    height: 4em;
-    /* Define the transition for transforming the SVG */
-    transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+    nav {
+        display: none;
+    }
 
-.line {
-    fill: none;
-    stroke: white;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    stroke-width: 3;
-    /* Define the transition for transforming the Stroke */
-    transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
-        stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+    .hamburger {
+        display: block;
+        right: 0;
+        bottom: 0;
+        position: fixed;
+        z-index: 10;
+        cursor: pointer;
+    }
 
-.line-top-bottom {
-    stroke-dasharray: 12 63;
-}
+    .hamburger input {
+        display: none;
+    }
 
-.hamburger input:checked+svg {
-    transform: rotate(-45deg);
-}
+    .hamburger svg {
+        /* The size of the SVG defines the overall size */
+        height: 4em;
+        /* Define the transition for transforming the SVG */
+        transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
 
-.hamburger input:checked+svg .line-top-bottom {
-    stroke-dasharray: 20 300;
-    stroke-dashoffset: -32.42;
-}
+    .line {
+        fill: none;
+        stroke: white;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 3;
+        /* Define the transition for transforming the Stroke */
+        transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+            stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .line-top-bottom {
+        stroke-dasharray: 12 63;
+    }
+
+    .hamburger input:checked+svg {
+        transform: rotate(-45deg);
+    }
+
+    .hamburger input:checked+svg .line-top-bottom {
+        stroke-dasharray: 20 300;
+        stroke-dashoffset: -32.42;
+    }
 
     .primera-foto {
         width: 150px;
@@ -257,17 +278,6 @@ height: 25px;
         width: 310px;
         height: 375px;
     }
-}
-
-.contactame-reducido {
-    width: 130px !important;
-    height: 38px !important;
-    margin-right: 10px;
-}
-
-.logo-reducido {
-    font-size: 21px !important;
-    width: 50% !important;
 }
 
 /* ------------------------------------------------------------- */
