@@ -9,7 +9,6 @@ function handleResize() {
         button.id = 'contactame'
         button.textContent = 'Contactame'
         button.classList.add('contactame-reducido')
-        document.querySelector('nav').remove()
         document.querySelector('header').appendChild(button)
         document.querySelector('.logo').classList.add('logo-reducido')
         
