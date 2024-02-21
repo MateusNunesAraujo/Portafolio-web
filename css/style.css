@@ -123,17 +123,19 @@ main {
     width: 100%;
     height: 100%;
     transition: 1s;
-    opacity: 1;
-    pointer-events: none;
+    opacity: 0;
 
 }
 
 .menu {
+    transition: all 0.5s;
+    position: fixed;
     width: 60%;
     height: 100%;
     padding-left: 20px;
     background-color: #fff;
     border: solid 2px #011C40;
+    left: -1000px;
 }
 
 .decorativos {
@@ -153,20 +155,22 @@ main {
 .linea-1,
 .linea-2,
 .linea-3 {
-    transition: all 1s;
+    transition: width 1s;
     height: 5px;
+    width: 20px;
     background-color: #00539C;
 }
 
-.linea-1 {
+.linea-1-activado {
     width: 140px;
+
 }
 
-.linea-2 {
+.linea-2-activado {
     width: 120px;
 }
 
-.linea-3 {
+.linea-3-activado {
     width: 70px;
 }
 
@@ -176,8 +180,28 @@ main {
 }
 
 .opciones ul {
+    margin-top: 20px;
+    display: flex;
+    transition: 0.7s left;
+    position: relative;
+    left: -1000px;
     padding: 0;
     list-style: none;
+    /* padding-bottom: 10px; */
+    flex-direction: column;
+    gap: 50px;
+}
+
+.opciones ul li {
+    display: flex;
+    gap: 10px;
+}
+
+.opciones ul li a{
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #011C40;
 }
 
 .opciones ul img {
@@ -187,6 +211,18 @@ main {
 
 
 /* Medias query y clases para la seccion de inicio */
+
+.contenido-menu-activado{
+opacity: 1;
+}
+
+.menu-activado{
+left: 0;
+}
+
+.opciones-activado{
+left: 0px !important;
+}
 
 @media (max-width: 500px) {
 
