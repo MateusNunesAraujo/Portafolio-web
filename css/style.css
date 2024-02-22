@@ -65,6 +65,7 @@ header {
 }
 
 #contactame {
+    cursor: pointer;
     font-weight: 700;
     border-radius: 10px;
     border-style: solid;
@@ -118,6 +119,7 @@ main {
 }
 
 .contenido-menu {
+    pointer-events: none;
     background: #000000a6;
     position: fixed;
     width: 100%;
@@ -209,11 +211,20 @@ main {
     height: 25px;
 }
 
+.copyright-mobile{
+    font-size: 14px;
+    color: #707070;
+    position: absolute;
+    bottom: 0;
+    padding-left: 35px;
+}
+
 
 /* Medias query y clases para la seccion de inicio */
 
 .contenido-menu-activado{
 opacity: 1;
+pointer-events: all;
 }
 
 .menu-activado{
