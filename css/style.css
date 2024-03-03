@@ -497,6 +497,7 @@ main {
 /* --------------------HABILIDADES---------------------------------------- */
 
 #habilidades {
+    overflow-x: hidden;
     position: relative;
     padding: 50px;
     display: flex;
@@ -546,18 +547,26 @@ main {
 }
 
 .barra {
+    border-radius: 20px;
     height: 30px;
-    background-color: #707070
+    background-color: #D9D9D9
 }
 
 .barra-interna {
+    border-radius: 20px 0px 0px 20px;
     width: 80px;
     height: 30px;
-    background-color: #000000a6
+    background-color: #011C40
 }
 
 .barra-grafica h6 {
     margin-bottom: 0;
+    color: #FFFFFF;
+}
+
+.barra-grafica p {
+color: #D9D9D9;
+font-weight: 700;
 }
 
 .porcentaje {
@@ -572,7 +581,7 @@ main {
 
 .cont-frameworks {
     transition: left 1s;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 2000px;
     height: 100vh;
@@ -585,10 +594,10 @@ main {
     justify-content: center;
 }
 
-/* .titulo-frameworks h1{
-
-} */
-
+.contenido-frameworks{
+margin-left: 30px;
+width: 60%;
+}
 /* Clases activadas */
 
 .cont-habilidades-ocultas {
@@ -608,40 +617,143 @@ main {
     align-items: center;
 }
 
+.contenido-frameworks div h1 {
+    margin-bottom: 0;
+    font-size: 55px;
+    color: #fff;
+}
+
+.contenido-frameworks p {
+    margin-top: 10px;
+    color: #D9D9D9;
+    margin-bottom: 0;
+    font-size: 24px;
+}
+
+
 .flecha-atras {
     transform: rotate(180deg);
 }
 
+.flecha-atras:last-child {
+    display: none;
+}
+
+.grupo-frameworks {
+    display: flex;
+    gap: 66px;
+}
+
 .img-frameworks {
     width: 220px;
+    position: relative;
+    top: 0;
+}
+
+.img-frameworks:last-child {
+    height: 162px;
+}
+
+.img-frameworks:first-child {
+    animation: levitar-primero 3s infinite alternate ease-in-out;
+}
+
+.img-frameworks:last-child {
+    animation: levitar-segundo 3s infinite alternate ease-in-out;
+}
+
+@keyframes levitar-primero {
+
+    /* Define la animación con un movimiento sutil de arriba a abajo */
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(30px);
+    }
+}
+
+@keyframes levitar-segundo {
+
+    /* Define la animación con un movimiento sutil de arriba a abajo */
+    0% {
+        transform: translateY(50px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
 }
 
 /* Diseño mobile de habilidades */
 
 @media (max-width: 500px) {
 
-    #habilidades{
-    height: auto;
+    #habilidades {
+        height: auto;
     }
 
-    .titulo-decorado.habilidad h1{
-    font-size: 55px;
+    .titulo-decorado.habilidad h1 {
+        font-size: 55px;
     }
 
-    .titulo-decorado.habilidad h3{
+    .titulo-decorado.habilidad h3 {
         font-size: 28px;
-        }
-    
-    .cont-habilidades{
+    }
+
+    .cont-habilidades {
         grid-template-columns: 1fr;
     }
 
-    #habilidades{
-    padding: 10px;
+    #habilidades {
+        padding: 10px;
     }
 
-    .flecha-img{
-    margin-top: 20px;
+    .flecha-img {
+        margin-top: 20px;
+    }
+
+    .flecha-atras:first-child {
+        display: none;
+    }
+
+    .flecha-atras:last-child {
+        display: block;
+    }
+
+    .cont-frameworks {
+        height: 100%;
+    }
+
+    .frameworks {
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin-left: 0;
+    }
+
+    .contenido-frameworks {
+        margin-left: 0;
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 28px
+    }
+
+    .contenido-frameworks h1 {
+        font-size: 50px;
+        margin-top: 20px;
+    }
+
+    .contenido-frameworks p {
+        font-size: 22px;
+    }
+
+    .grupo-frameworks {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 50px;
     }
 
 }

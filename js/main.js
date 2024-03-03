@@ -1,6 +1,12 @@
 let btnMenu = document.querySelector('.hamburger input')
 let flechaAdelanteBtn = document.querySelector('.flecha-img')
-let flechaAtrasBtn = document.querySelector('.flecha-img-atras')
+let flechaAtrasBtn = document.querySelectorAll('.flecha-img-atras')
+let barraHabilidades = document.querySelectorAll('.barra-grafica')
+
+barraHabilidades.forEach(element => {
+    let porcentaje = element.children[1].textContent
+    element.children[2].querySelector('.barra-interna').style.width = porcentaje
+});
 
 flechaAdelanteBtn.addEventListener('click',()=>{
 document.querySelector('.cont-habilidades').classList.add('cont-habilidades-ocultas')
@@ -8,11 +14,13 @@ document.querySelector('.cont-frameworks').classList.add('cont-frameworks-activa
 
 })
 
-flechaAtrasBtn.addEventListener('click',()=>{
-    document.querySelector('.cont-habilidades').classList.remove('cont-habilidades-ocultas')
-    document.querySelector('.cont-frameworks').classList.remove('cont-frameworks-activas')
-    
-    })
+flechaAtrasBtn.forEach(element =>{
+    element.addEventListener('click',()=>{
+        document.querySelector('.cont-habilidades').classList.remove('cont-habilidades-ocultas')
+        document.querySelector('.cont-frameworks').classList.remove('cont-frameworks-activas')
+        
+        })
+})
 
 btnMenu.addEventListener('click', (e) => {
     if (!btnMenu.classList.contains('precionado')) {
