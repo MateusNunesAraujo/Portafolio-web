@@ -565,8 +565,8 @@ main {
 }
 
 .barra-grafica p {
-color: #D9D9D9;
-font-weight: 700;
+    color: #D9D9D9;
+    font-weight: 700;
 }
 
 .porcentaje {
@@ -594,10 +594,11 @@ font-weight: 700;
     justify-content: center;
 }
 
-.contenido-frameworks{
-margin-left: 30px;
-width: 60%;
+.contenido-frameworks {
+    margin-left: 30px;
+    width: 60%;
 }
+
 /* Clases activadas */
 
 .cont-habilidades-ocultas {
@@ -756,4 +757,56 @@ width: 60%;
         gap: 50px;
     }
 
+}
+
+/* --------------------EDUCACION---------------------------------------- */
+
+#educacion {
+    display: flex;
+    height: auto;
+    width: 100%;
+    background-color: #0E69B8;
+    padding: 50px;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.titulo-decorado.educacion {
+    align-items: center;
+}
+
+.titulo-decorado.educacion h1 {
+    font-size: 90px;
+}
+
+.cont-educacion {
+    display: flex;
+    gap: 50px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.informacion-educacion {
+    width: 500px;
+    height: 330px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.5s;
+}
+
+.informacion-educacion p{
+color: #00539C;
+font-size: 18px;
+}
+
+.informacion-educacion:hover {
+    transform: scale(1.1);
+}
+
+.informacion-educacion h3 {
+    font-weight: 700;
+    color: #011C40;
 }
