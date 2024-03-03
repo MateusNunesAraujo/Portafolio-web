@@ -1,4 +1,19 @@
 let btnMenu = document.querySelector('.hamburger input')
+let flechaAdelanteBtn = document.querySelector('.flecha-img')
+let flechaAtrasBtn = document.querySelector('.flecha-img-atras')
+
+flechaAdelanteBtn.addEventListener('click',()=>{
+document.querySelector('.cont-habilidades').classList.add('cont-habilidades-ocultas')
+document.querySelector('.cont-frameworks').classList.add('cont-frameworks-activas')
+
+})
+
+flechaAtrasBtn.addEventListener('click',()=>{
+    document.querySelector('.cont-habilidades').classList.remove('cont-habilidades-ocultas')
+    document.querySelector('.cont-frameworks').classList.remove('cont-frameworks-activas')
+    
+    })
+
 btnMenu.addEventListener('click', (e) => {
     if (!btnMenu.classList.contains('precionado')) {
         btnMenu.classList.add('precionado')
@@ -20,6 +35,5 @@ btnMenu.addEventListener('click', (e) => {
         document.querySelector('.linea-3').classList.remove('linea-3-activado')
         document.querySelector('.opciones ul').classList.remove('opciones-activado')
     }
-
-
 })
+
