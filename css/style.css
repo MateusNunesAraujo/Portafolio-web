@@ -419,7 +419,7 @@ main {
 .cont-informacion {
     padding: 30px;
     border-radius: 10px;
-    border: #011C40 solid;
+    border: #011C40 3px solid;
     display: flex;
     gap: 20px;
     flex-direction: column;
@@ -631,9 +631,18 @@ main {
     font-size: 24px;
 }
 
+.flecha-img{
+    transition: transform 0.5s;
+cursor: pointer;
+}
 
 .flecha-atras {
     transform: rotate(180deg);
+    cursor: pointer;
+   
+}
+.flecha-img:hover{
+transform: scale(1.3);
 }
 
 .flecha-atras:last-child {
@@ -679,7 +688,7 @@ main {
 
     /* Define la animación con un movimiento sutil de arriba a abajo */
     0% {
-        transform: translateY(50px);
+        transform: translateY(30px);
     }
 
     100% {
@@ -712,7 +721,7 @@ main {
     }
 
     .flecha-img {
-        margin-top: 20px;
+        margin: 30px 20px;
     }
 
     .flecha-atras:first-child {
@@ -797,9 +806,9 @@ main {
     transition: transform 0.5s;
 }
 
-.informacion-educacion p{
-color: #00539C;
-font-size: 18px;
+.informacion-educacion p {
+    color: #00539C;
+    font-size: 18px;
 }
 
 .informacion-educacion:hover {
@@ -809,4 +818,16 @@ font-size: 18px;
 .informacion-educacion h3 {
     font-weight: 700;
     color: #011C40;
+}
+
+/* Diseño mobile de Educacion */
+
+@media (max-width:500px) {
+    .titulo-decorado.educacion h1 {
+        font-size: 55px;
+    }
+
+    .titulo-decorado.educacion h3 {
+        font-size: 28px;
+    }
 }
