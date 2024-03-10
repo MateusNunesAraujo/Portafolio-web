@@ -3,6 +3,46 @@
     padding: 0;
 }
 
+#up {
+    cursor: pointer;
+    border-radius: 100%;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    z-index: 1000;
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+    bottom: -200px;
+    right: 20px;
+    box-shadow: 2px 5px 15px;
+    transition: all 0.5s;
+}
+
+#up img {
+    width: 25px;
+}
+
+#up:hover{
+transform: scale(1.2);
+}
+
+@media (max-width: 500px) {
+
+    #up{
+     display: none;
+    }
+
+}
+
+/* Clases de activacion del boton "up" */
+
+.up-activado{
+    bottom: 30px !important;
+    right: 30px !important;
+}
 
 #inicio {
     height: 100vh;
@@ -56,11 +96,10 @@ header {
     text-decoration: none;
     color: #fff;
     font-weight: 700;
-    transition: all 1s;
+    transition: all 0.5s;
 }
 
 .navegacion li a:hover {
-    text-decoration: underline;
     color: #011C40;
 }
 
@@ -356,7 +395,7 @@ main {
     z-index: 1;
     left: 20px;
     top: 15px;
-    border: solid;
+    border: #011C40 solid;
     width: 400px;
     height: 520px;
 }
@@ -556,7 +595,8 @@ main {
     border-radius: 20px 0px 0px 20px;
     width: 80px;
     height: 30px;
-    background-color: #011C40
+    background-color: #011C40;
+    transition: 1s all;
 }
 
 .barra-grafica h6 {
@@ -631,18 +671,19 @@ main {
     font-size: 24px;
 }
 
-.flecha-img{
+.flecha-img {
     transition: transform 0.5s;
-cursor: pointer;
+    cursor: pointer;
 }
 
 .flecha-atras {
     transform: rotate(180deg);
     cursor: pointer;
-   
+
 }
-.flecha-img:hover{
-transform: scale(1.3);
+
+.flecha-img:hover {
+    transform: scale(1.3);
 }
 
 .flecha-atras:last-child {
@@ -775,7 +816,7 @@ transform: scale(1.3);
     height: auto;
     width: 100%;
     background-color: #0E69B8;
-    padding: 50px;
+    padding: 60px 20px;
     flex-direction: column;
     gap: 50px;
 }
@@ -800,7 +841,7 @@ transform: scale(1.3);
 .informacion-educacion {
     width: 500px;
     height: 330px;
-    background-color: #fff;
+    background-color: #f9f9f9;
     border-radius: 10px;
     padding: 20px;
     transition: transform 0.5s;
@@ -830,4 +871,128 @@ transform: scale(1.3);
     .titulo-decorado.educacion h3 {
         font-size: 28px;
     }
+}
+
+
+/*------------------------------PROYECTOS----------------------------------------*/
+
+#proyectos {
+    padding: 50px;
+    display: flex;
+    gap: 60px;
+    background-color: #09508D;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulo-decorado.proyecto {
+    align-items: center;
+}
+
+.titulo-decorado.proyecto h1 {
+    font-size: 90px;
+}
+
+.cont-proyecto {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+.informacion-proyecto {
+    border-radius: 20px;
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    background-color: #f9f9f9;
+    width: 100%;
+}
+
+.informacion-proyecto h3 {
+    color: #011C40;
+    font-weight: 700;
+}
+
+.informacion-proyecto p {
+    width: 100%;
+    height: 250px;
+    overflow: auto;
+    color: #0E69B8;
+    font-size: 18px;
+}
+
+/* Diseño mobile de Proyectos */
+
+@media (max-width:500px) {
+    .titulo-decorado.proyecto h1 {
+        font-size: 55px;
+    }
+
+    .titulo-decorado.proyecto h3 {
+        font-size: 28px;
+    }
+
+    #proyectos {
+        padding: 60px 20px;
+    }
+
+    .informacion-proyecto {
+        padding: 25px;
+    }
+
+    .cont-proyecto {
+        width: 100%;
+    }
+
+    iframe {
+        width: 100%;
+    }
+}
+
+/* Pie de Pagina */
+
+footer:not(.p-3) {
+    background-color: #f9f9f9;
+    font-size: 22px;
+    height: 300px;
+    display: flex;
+    gap: 25px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.p-1 {
+    text-align: center;
+    margin-top: 50px;
+    font-weight: 400;
+
+}
+
+.p-1:not(b) {
+    color: #0E69B8;
+}
+
+
+.p-2 {
+    color: #766666;
+}
+
+.p-2 b a {
+    color: #766666;
+    text-decoration: none;
+}
+
+.p-3 {
+    font-size: 18px;
+    color: #011C40;
+}
+
+.p-2 a:hover {
+    color: #0E69B8;
 }

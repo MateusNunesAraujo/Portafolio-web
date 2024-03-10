@@ -2,11 +2,60 @@ let btnMenu = document.querySelector('.hamburger input')
 let flechaAdelanteBtn = document.querySelector('.flecha-img')
 let flechaAtrasBtn = document.querySelectorAll('.flecha-img-atras')
 let barraHabilidades = document.querySelectorAll('.barra-grafica')
+let opcionesNavegacion = document.querySelectorAll('.navegacion li a')
+let upBtn = document.querySelector('#up')
+let pagina = document.querySelector('#inicio')
+let habilidades = document.querySelector('#habilidades')
 
-barraHabilidades.forEach(element => {
+window.addEventListener('scroll',()=>{
+    let ubicacion = pagina.getBoundingClientRect().top;
+    if(ubicacion < 0){
+    upBtn.classList.add('up-activado')
+    }else{
+    upBtn.classList.remove('up-activado')
+    }
+})
+
+
+/* let habilidades = document.getElementById('habilidades').addEventListener('') */
+opcionesNavegacion.forEach(element => {
+
+    element.addEventListener('mouseover',(e)=>{
+        console.log(e.target.nextElementSibling)
+    e.target.nextElementSibling.style.width = '100%'
+    })
+
+})
+
+opcionesNavegacion.forEach(element => {
+
+    element.addEventListener('mouseout',(e)=>{
+        console.log(e.target.nextElementSibling)
+    e.target.nextElementSibling.style.width = '0'
+    })
+
+})
+
+window.addEventListener('scroll',()=>{
+    let ubicacion = habilidades.getBoundingClientRect().bottom;
+    console.log(habilidades.getBoundingClientRect())
+    if(ubicacion < 1200){
+        console.log('a')
+        barraHabilidades.forEach(element => {
+            let porcentaje = element.children[1].textContent
+            element.children[2].querySelector('.barra-interna').style.width = porcentaje
+        });
+        }else{
+            barraHabilidades.forEach(element => {
+                element.children[2].querySelector('.barra-interna').style.width = '0px'
+            });
+        }
+    
+})
+/* barraHabilidades.forEach(element => {
     let porcentaje = element.children[1].textContent
     element.children[2].querySelector('.barra-interna').style.width = porcentaje
-});
+}); */
 
 flechaAdelanteBtn.addEventListener('click',()=>{
 document.querySelector('.cont-habilidades').classList.add('cont-habilidades-ocultas')
