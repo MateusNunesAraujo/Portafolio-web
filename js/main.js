@@ -6,6 +6,36 @@ let opcionesNavegacion = document.querySelectorAll('.navegacion li a')
 let upBtn = document.querySelector('#up')
 let pagina = document.querySelector('#inicio')
 let habilidades = document.querySelector('#habilidades')
+let foto = document.querySelector('#foto')
+let educacion = document.querySelector('.cont-educacion')
+let proyectos = document.querySelector('.cont-proyecto')
+
+
+window.addEventListener('scroll',()=>{
+    let ubicacion = proyectos.getBoundingClientRect().top;
+    console.log(ubicacion)
+    if(ubicacion < 250){
+        proyectos.classList.add('cont-proyecto-activado')
+    }
+   
+})
+
+window.addEventListener('scroll',()=>{
+    let ubicacion = educacion.getBoundingClientRect().top;
+
+    if(ubicacion < 250){
+        educacion.classList.add('cont-educacion-activado')
+    }
+   
+})
+
+window.addEventListener('scroll',()=>{
+    let ubicacion = foto.getBoundingClientRect().top;
+    if(ubicacion < 200){
+    foto.classList.add('foto-activado')
+    }
+})
+
 
 window.addEventListener('scroll',()=>{
     let ubicacion = pagina.getBoundingClientRect().top;
@@ -38,9 +68,7 @@ opcionesNavegacion.forEach(element => {
 
 window.addEventListener('scroll',()=>{
     let ubicacion = habilidades.getBoundingClientRect().bottom;
-    console.log(habilidades.getBoundingClientRect())
     if(ubicacion < 1200){
-        console.log('a')
         barraHabilidades.forEach(element => {
             let porcentaje = element.children[1].textContent
             element.children[2].querySelector('.barra-interna').style.width = porcentaje

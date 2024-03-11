@@ -383,11 +383,21 @@ main {
 }
 
 #foto {
+    transform: translateY(50px);
     position: absolute;
     z-index: 2;
+    opacity: 0;
     background: #fff;
     width: 400px;
     height: 520px;
+    transition: all 0.5s;
+}
+
+/* Clase activada de foto */
+
+.foto-activado{
+    transform: translateY(0px) !important;
+    opacity: 1 !important;
 }
 
 #marco {
@@ -830,12 +840,21 @@ main {
 }
 
 .cont-educacion {
+    transform: translateY(50px);
+    opacity: 0;
     display: flex;
     gap: 50px;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    transition: all 0.5s;
+}
+
+/* clase de activacion de "cont-educacion" */
+.cont-educacion-activado{
+transform: translateY(0px);
+opacity: 1;
 }
 
 .informacion-educacion {
@@ -895,11 +914,21 @@ main {
 }
 
 .cont-proyecto {
+    transform: translateY(50px);
+    opacity: 0;
     width: 65%;
     display: flex;
     flex-direction: column;
     gap: 100px;
+    transition: all 1s;
 }
+
+/* Clase de activacion de "cont-proyecto" */
+.cont-proyecto-activado{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
 
 .informacion-proyecto {
     border-radius: 20px;
@@ -923,6 +952,15 @@ main {
     overflow: auto;
     color: #0E69B8;
     font-size: 18px;
+}
+
+.proyecto-sin-video{
+display: flex;
+align-items: center;
+}
+
+.proyecto-sin-video a img{
+    width: 50px;
 }
 
 /* Diseño mobile de Proyectos */
