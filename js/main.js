@@ -9,6 +9,21 @@ let habilidades = document.querySelector('#habilidades')
 let foto = document.querySelector('#foto')
 let educacion = document.querySelector('.cont-educacion')
 let proyectos = document.querySelector('.cont-proyecto')
+let cerrarBtn = document.querySelector('.ico-cerrar')
+let contactameBtn = document.querySelector('#contactame')
+let contactameReducidoBtn = document.querySelector('#contactame-reducido')
+
+contactameReducidoBtn.addEventListener('click',()=>{
+    document.querySelector('.modal-contacto').classList.add('modal-contacto-activado')
+})
+
+contactameBtn.addEventListener('click',()=>{
+    document.querySelector('.modal-contacto').classList.add('modal-contacto-activado')
+})
+
+cerrarBtn.addEventListener('click',()=>{
+    document.querySelector('.modal-contacto').classList.remove('modal-contacto-activado')
+})
 
 
 window.addEventListener('scroll',()=>{
