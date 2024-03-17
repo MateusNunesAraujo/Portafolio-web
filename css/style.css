@@ -3,7 +3,11 @@
     padding: 0;
 }
 
-.modal-contacto{
+
+body{
+overflow-x: hidden;
+}
+/* .modal-contacto{
     display: flex;
     pointer-events: none;
     background: #000000cc;
@@ -18,10 +22,10 @@
     gap: 50px;
     justify-content: center;
 
-}
+} */
 
 /* Clase de activacion ".modal-contacto" */
-
+/* 
 .modal-contacto-activado{
 pointer-events: all;
 opacity: 1;
@@ -78,7 +82,61 @@ height: 60px;
     width: 40px;
     height: 40px;
     }
+ 
+}
+*/
 
+
+.redes-sociales{
+position: absolute;
+bottom: 0;
+right: -1000px;
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+transition: right 0.5s;
+height: 87%;
+}
+
+/* Clases de activación de redes sociales */
+
+.redes-sociales-activado{
+   right: 0;
+}
+
+.red-social{
+    border: solid 1px #011C40;
+    border-radius: 20px 0px 0px 20px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+background-color: #FFFFFF;
+}
+
+.red-social img {
+width: 50px;
+}
+
+.red-social span a {
+    color: #011C40;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+@media (max-width: 500px) {
+
+    .red-social{
+    padding: 15px;
+    gap: 15px;
+    }
+
+    .red-social img {
+        width: 35px;
+    }
+    
+ 
 }
 
 
@@ -125,6 +183,8 @@ transform: scale(1.2);
 }
 
 #inicio {
+    position: relative;
+    overflow-x: hidden;
     height: 100vh;
     width: 100%;
     background-image: url('../resources/img/mountains-1985027_1920.jpg');
@@ -197,6 +257,7 @@ header {
 }
 
 main {
+    
     height: 80%;
     display: flex;
     align-items: start;
@@ -970,6 +1031,10 @@ opacity: 1;
     .titulo-decorado.educacion h3 {
         font-size: 28px;
     }
+
+    .informacion-educacion{
+    height: 450px;
+    }
 }
 
 
@@ -1028,10 +1093,11 @@ opacity: 1;
 
 .informacion-proyecto p {
     width: 100%;
-    height: 250px;
+    height: auto;
     overflow: auto;
     color: #0E69B8;
     font-size: 18px;
+    max-height: 250px;
 }
 
 .proyecto-sin-video{

@@ -14,17 +14,26 @@ let contactameBtn = document.querySelector('#contactame')
 let contactameReducidoBtn = document.querySelector('#contactame-reducido')
 
 contactameReducidoBtn.addEventListener('click',()=>{
-    document.querySelector('.modal-contacto').classList.add('modal-contacto-activado')
+    if(!document.querySelector('.redes-sociales').classList.contains('redes-sociales-activado')){
+        document.querySelector('.redes-sociales').classList.add('redes-sociales-activado')
+    }else{
+        document.querySelector('.redes-sociales').classList.remove('redes-sociales-activado')
+    }
+  
 })
 
 contactameBtn.addEventListener('click',()=>{
-    document.querySelector('.modal-contacto').classList.add('modal-contacto-activado')
+    if(!document.querySelector('.redes-sociales').classList.contains('redes-sociales-activado')){
+        document.querySelector('.redes-sociales').classList.add('redes-sociales-activado')
+    }else{
+        document.querySelector('.redes-sociales').classList.remove('redes-sociales-activado')
+    }
 })
 
-cerrarBtn.addEventListener('click',()=>{
+/* cerrarBtn.addEventListener('click',()=>{
     document.querySelector('.modal-contacto').classList.remove('modal-contacto-activado')
 })
-
+ */
 
 window.addEventListener('scroll',()=>{
     let ubicacion = proyectos.getBoundingClientRect().top;
