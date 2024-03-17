@@ -88,6 +88,7 @@ height: 60px;
 
 
 .redes-sociales{
+    width: 240px;
 position: absolute;
 bottom: 0;
 right: -1000px;
@@ -105,17 +106,26 @@ height: 87%;
 }
 
 .red-social{
-    border: solid 1px #011C40;
     border-radius: 20px 0px 0px 20px;
     display: flex;
     align-items: center;
-    padding: 20px;
     gap: 20px;
 background-color: #FFFFFF;
 }
 
-.red-social img {
-width: 50px;
+.img-red-social{
+    border-radius: 10px 0px 0px 10px;
+    padding: 10px;
+    display: flex;
+    width: 30%;
+    height: 70px;
+    align-items: center;
+    justify-content: center;
+    background-color: #d2d2d2;
+}
+
+.red-social .img-red-social img {
+width: 40px;
 }
 
 .red-social span a {
@@ -127,12 +137,22 @@ width: 50px;
 
 @media (max-width: 500px) {
 
+    .redes-sociales{
+        width: 180px;
+    justify-content: flex-start;
+    gap: 50px;
+    height: 70%;
+    }
+
     .red-social{
-    padding: 15px;
     gap: 15px;
     }
 
-    .red-social img {
+    .red-social .img-red-social{
+    height: 55px;
+    }
+
+    .red-social .img-red-social img {
         width: 35px;
     }
     
