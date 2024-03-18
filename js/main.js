@@ -15,7 +15,7 @@ let contactameReducidoBtn = document.querySelector('#contactame-reducido')
 
 contactameReducidoBtn.addEventListener('click',()=>{
     if(!document.querySelector('.redes-sociales').classList.contains('redes-sociales-activado')){
-        contactameReducidoBtn.textContent = 'Cerrar lista'
+        contactameReducidoBtn.textContent = '\u2715 Cerrar lista'
         document.querySelector('.redes-sociales').classList.add('redes-sociales-activado')
     }else{
         contactameReducidoBtn.textContent = 'Contactame'
@@ -26,7 +26,7 @@ contactameReducidoBtn.addEventListener('click',()=>{
 
 contactameBtn.addEventListener('click',()=>{
     if(!document.querySelector('.redes-sociales').classList.contains('redes-sociales-activado')){
-        contactameBtn.textContent = 'Cerrar lista'
+        contactameBtn.textContent = '\u2715 Cerrar lista'
         document.querySelector('.redes-sociales').classList.add('redes-sociales-activado')
     }else{
         contactameBtn.textContent = 'Contactame'
