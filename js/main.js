@@ -65,7 +65,7 @@ window.addEventListener('scroll',()=>{
 
 window.addEventListener('scroll',()=>{
     let ubicacion = foto.getBoundingClientRect().top;
-    if(ubicacion < 410){
+    if(ubicacion < 460){
     foto.classList.add('foto-activado')
     }
 })
