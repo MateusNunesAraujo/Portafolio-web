@@ -577,7 +577,7 @@ opacity: 1;
     z-index: 1;
     left: 20px;
     top: 15px;
-    border: #011C40 solid;
+    border: #011C40 4px solid;
     width: 400px;
     height: 520px;
 }
