@@ -13,6 +13,12 @@ let cerrarBtn = document.querySelector('.ico-cerrar')
 let contactameBtn = document.querySelector('#contactame')
 let contactameReducidoBtn = document.querySelector('#contactame-reducido')
 
+document.addEventListener('DOMContentLoaded',()=>{
+
+    document.querySelector('.primera-foto').classList.add('primera-foto-activacion')
+
+})
+
 contactameReducidoBtn.addEventListener('click',()=>{
     if(!document.querySelector('.redes-sociales').classList.contains('redes-sociales-activado')){
         contactameReducidoBtn.textContent = '\u2715 Cerrar lista'

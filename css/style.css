@@ -90,6 +90,7 @@ height: 60px;
 .redes-sociales{
     width: 240px;
 position: absolute;
+z-index: 5;
 bottom: 0;
 right: -1000px;
 display: flex;
@@ -207,7 +208,7 @@ transform: scale(1.2);
     overflow-x: hidden;
     height: 100vh;
     width: 100%;
-    background-image: url('../resources/img/mountains-1985027_1920.jpg');
+    background-image: url('../resources/img/mountains-1985027_1920.webp');
     background-size: cover;
     /* O puedes usar "contain" según tus preferencias */
     background-position: center;
@@ -290,6 +291,16 @@ main {
     background-color: #fff;
     width: 230px;
     height: 230px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s;
+    
+}
+
+/* Clase de activación */
+.primera-foto-activacion{
+    transform: translateY(0px);
+opacity: 1;
 }
 
 .sobre_mi {
@@ -551,7 +562,7 @@ main {
     background: #fff;
     width: 400px;
     height: 520px;
-    transition: all 0.5s;
+    transition: all 0.8s;
 }
 
 /* Clase activada de foto */
@@ -664,8 +675,8 @@ main {
 
     #foto,
     #marco {
-        width: 180px;
-        height: 245px;
+        width: 210px;
+        height: 290px;
     }
 
     #marco {
@@ -1086,6 +1097,22 @@ opacity: 1;
     flex-direction: column;
     gap: 100px;
     transition: all 1s;
+}
+
+.tecnologias h6{
+color: #011C40 ;
+text-align: center;
+}
+
+.elementos-tecnologias{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.elementos-tecnologias img{
+    margin: 20px;
+    width: 35px;
 }
 
 /* Clase de activacion de "cont-proyecto" */
