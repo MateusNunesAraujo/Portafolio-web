@@ -1090,6 +1090,7 @@ opacity: 1;
 }
 
 .cont-proyecto {
+    pointer-events: none;
     transform: translateY(50px);
     opacity: 0;
     width: 65%;
@@ -1117,6 +1118,7 @@ text-align: center;
 
 /* Clase de activacion de "cont-proyecto" */
 .cont-proyecto-activado{
+    pointer-events: all;
     transform: translateY(0px);
     opacity: 1;
 }
