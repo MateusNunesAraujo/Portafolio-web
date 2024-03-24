@@ -136,13 +136,24 @@ width: 40px;
 }
 
 
-@media (max-width: 500px) {
+@media (max-width: 1050px){
+    .redes-sociales{
+        width: 180px;
+    justify-content: flex-start;
+    gap: 50px;
+    height: 75%;
+    }
+}
+
+
+
+@media (max-width: 800px) {
 
     .redes-sociales{
         width: 180px;
     justify-content: flex-start;
     gap: 50px;
-    height: 70%;
+    height: 70% !important;
     }
 
     .red-social{
@@ -188,7 +199,7 @@ width: 40px;
 transform: scale(1.2);
 }
 
-@media (max-width: 500px) {
+@media (max-width: 800px) {
 
     #up{
      display: none;
@@ -246,6 +257,7 @@ header {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
     gap: 42px;
 }
 
@@ -447,7 +459,7 @@ opacity: 1;
     left: 0px !important;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 800px) {
 
     #contactame-reducido {
         display: block !important;
@@ -664,19 +676,64 @@ opacity: 1;
     width: 35px;
 }
 
+@media (max-width: 1050px) {
 
-/* Medias query y clases para la seccion de sobre mí */
-@media (max-width: 500px) {
+    #inicio{
+    height: auto;
+    }
+    
     #sobre-mi {
         height: auto;
         padding: 40px 30px;
         grid-template-columns: 100%;
+        justify-items: center;
     }
+
+    .sobre_mi{
+    margin-bottom: 50px;
+    }
+
+    #foto{
+    position: relative;
+    z-index: 2;
+    
+    }
+
+    header{
+    flex-direction: column;
+    }
+
+    .logo{
+        width: auto;
+    }
+
+    .navegacion{
+        margin-top: 30px;
+        margin-bottom: 30px;
+    flex-wrap: wrap;
+    }
+
+}
+
+/* Medias query y clases para la seccion de sobre mí */
+@media (max-width: 800px) {
+    
+    #inicio{
+    height: 100vh !important;
+    }
+
+    header{
+        flex-direction: row !important;
+        }
 
     #foto,
     #marco {
         width: 210px;
         height: 290px;
+    }
+
+    #foto{
+    position: absolute !important;
     }
 
     #marco {
@@ -918,10 +975,25 @@ opacity: 1;
         transform: translateY(0px);
     }
 }
+@media (max-width: 1050px){
+
+    .titulo-frameworks{
+        width: 65%;
+    }
+
+    .grupo-frameworks {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 40px;
+    }
+    
+}
+
 
 /* Diseño mobile de habilidades */
 
-@media (max-width: 500px) {
+@media (max-width: 800px) {
 
     #habilidades {
         height: auto;
@@ -982,12 +1054,6 @@ opacity: 1;
         font-size: 22px;
     }
 
-    .grupo-frameworks {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 50px;
-    }
 
 }
 
@@ -1054,7 +1120,7 @@ opacity: 1;
 
 /* Diseño mobile de Educacion */
 
-@media (max-width:500px) {
+@media (max-width:800px) {
     .titulo-decorado.educacion h1 {
         font-size: 55px;
     }
@@ -1160,7 +1226,7 @@ align-items: center;
 
 /* Diseño mobile de Proyectos */
 
-@media (max-width:500px) {
+@media (max-width:800px) {
     .titulo-decorado.proyecto h1 {
         font-size: 55px;
     }
