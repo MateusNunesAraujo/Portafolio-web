@@ -20,9 +20,27 @@ let operacion = 0
 let counter = 0
 let widthImg = 100 / sliderSection.length
 
-setInterval(()=>{
+setInterval(() => {
     moveToRight()
-},3500)
+}, 3500)
+
+sliderSection.forEach(e => {
+
+    e.addEventListener('click', (e) => {
+        document.querySelector(".img-ampliada .ampliado").innerHTML = `<img src='${e.target.src}'>`
+        document.querySelector(".img-ampliada").style.opacity = '1'
+        document.querySelector(".img-ampliada").style.pointerEvents = 'all'
+        document.querySelector(".img-ampliada").addEventListener("click", (e) => {
+            if (document.querySelector(".img-ampliada") == e.target) {
+                document.querySelector(".img-ampliada").style.opacity = '0'
+                document.querySelector(".img-ampliada").style.pointerEvents = 'none'
+            }
+        })
+    })
+
+})
+
+
 
 btnLeft.addEventListener("click", e => moveToLeft())
 btnRight.addEventListener("click", e => moveToRight())
@@ -49,10 +67,10 @@ function moveToLeft() {
         slider.style.transform = `translate(-${operacion}%)`
         slider.style.transition = "all ease .6s"
         return
-    } 
-        operacion = operacion - widthImg
-        slider.style.transform = `translate(-${operacion}%)`
-        slider.style.transition = "all ease .6s"
+    }
+    operacion = operacion - widthImg
+    slider.style.transform = `translate(-${operacion}%)`
+    slider.style.transition = "all ease .6s"
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -161,7 +179,7 @@ window.addEventListener('scroll', () => {
     element.children[2].querySelector('.barra-interna').style.width = porcentaje
 }); */
 
-flechaAdelanteBtn.addEventListener('click', () => {
+/* flechaAdelanteBtn.addEventListener('click', () => {
     document.querySelector('.cont-habilidades').classList.add('cont-habilidades-ocultas')
     document.querySelector('.cont-frameworks').classList.add('cont-frameworks-activas')
 
@@ -173,7 +191,7 @@ flechaAtrasBtn.forEach(element => {
         document.querySelector('.cont-frameworks').classList.remove('cont-frameworks-activas')
 
     })
-})
+}) */
 
 btnMenu.addEventListener('click', (e) => {
     if (!btnMenu.classList.contains('precionado')) {
